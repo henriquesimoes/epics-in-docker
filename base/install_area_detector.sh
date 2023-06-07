@@ -8,6 +8,7 @@ git clone --depth 1 --branch ${AREA_DETECTOR_VERSION} \
 cd areaDetector
 
 git submodule update --init --depth 1 -j ${JOBS} \
+    ADSimDetector \
     ADSupport \
     ADCore
 
@@ -15,6 +16,7 @@ cd configure
 cat EXAMPLE_RELEASE.local | \
     sed -e "s|^#ADCORE=|ADCORE=|" \
         -e "s|^#ADSUPPORT=|ADSUPPORT=|" \
+        -e "s|^#ADSIMDETECTOR=|ADSIMDETECTOR=|" \
     > RELEASE.local
 
 cat EXAMPLE_RELEASE_LIBS.local | \

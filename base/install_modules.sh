@@ -64,3 +64,15 @@ CALC = ${EPICS_MODULES_PATH}/calc
 install_github_module epics-modules autosave $AUTOSAVE_VERSION "
 EPICS_BASE = ${EPICS_BASE_PATH}
 "
+
+install_github_module epics-modules sscan $SSCAN_VERSION "
+EPICS_BASE = ${EPICS_BASE_PATH}
+"
+
+install_github_module epics-modules busy $BUSY_VERSION "
+ASYN = ${EPICS_MODULES_PATH}/asyn
+AUTOSAVE = ${EPICS_MODULES_PATH}/autosave
+BUSY = ${EPICS_MODULES_PATH}/busy
+
+EPICS_BASE = ${EPICS_BASE_PATH}
+"
