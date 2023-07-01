@@ -32,15 +32,6 @@ install_github_module() {
     install_module $module_name "$release_content"
 }
 
-# Build seq first since it doesn't depend on anything
-wget "http://www-csr.bessy.de/control/SoftDist/sequencer/releases/seq-$SEQUENCER_VERSION.tar.gz"
-tar -xf seq-$SEQUENCER_VERSION.tar.gz
-rm seq-$SEQUENCER_VERSION.tar.gz
-mv seq-$SEQUENCER_VERSION seq
-install_module seq "
-EPICS_BASE = ${EPICS_BASE_PATH}
-"
-
 install_github_module epics-modules calc $CALC_VERSION "
 EPICS_BASE = ${EPICS_BASE_PATH}
 
