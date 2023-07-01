@@ -1,6 +1,6 @@
 services:
   epics-base:
-    image: ghcr.io/cnpem/lnls-debian-11-epics-7:$TAG
+    image: $REGISTRY/lnls-debian-11-epics-7:$TAG
     build:
       context: ./
       dockerfile: Dockerfile
